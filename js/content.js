@@ -10,7 +10,9 @@ $(function () {
     console.log(document.URL.indexOf("www.instagram.com"));
     if (document.URL.indexOf("instagram.com") > 0) {
 
-
+        /**
+        * @todo: bunun gibi oluşturuyoruz.. ide bunu direk iş tanımı olarak görüyor...
+        */
 
       /*  
         <a class='button' href='#'><img src="https://cdn2.iconfinder.com/data/icons/social-media-red/32/instagram_online_social_media-64.png"></a>
