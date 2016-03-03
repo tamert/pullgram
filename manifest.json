@@ -1,0 +1,22 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/jquery.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "js/jquery.js", "js/content.js" ],
+      "matches": [ "https://www.instagram.com/*" ]
+   } ],
+   "description": "Multi follows, unfollows and unfollow users that does not following you",
+   "icons": {
+      "128": "img/128.png",
+      "16": "img/16.png",
+      "48": "img/48.png",
+      "64": "img/64.png"
+   },
+   "manifest_version": 2,
+   "name": "Instagram Bulk Follow, UnFollow",
+   "permissions": [ "storage", "tabs", "browsingData", "unlimitedStorage", "background", "http://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}
