@@ -24,7 +24,6 @@ $(function () {
             });
         });
 
-
         $("#unfollowalljs").click(function () {
 
             var sayac = 100;
