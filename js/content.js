@@ -6,6 +6,28 @@ $(function () {
     console.log(document.URL.indexOf("www.instagram.com"));
     if (document.URL.indexOf("instagram.com") > 0) {
 
+
+
+      /*  
+        <a class='button' href='#'><img src="https://cdn2.iconfinder.com/data/icons/social-media-red/32/instagram_online_social_media-64.png"></a>
+        <div class="area">
+        <div class='wrap'>
+          <div class='content'>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, </p>
+          </div>
+        </div>
+          </div>
+        */
+        $("body").append('<a class="button-pull" href="#"><img src="https://cdn2.iconfinder.com/data/icons/social-media-red/32/instagram_online_social_media-64.png"></a><div class="area"><div class="wrap"><div class="content"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, </p></div></div></div>');
+        
+        $('a.button-pull').on('click', function(e){
+          e.preventDefault();
+          $('.wrap, a').toggleClass('active'); 
+          return false;
+        });
+
+        /*
         $("body").append('<div style="position:fixed;top:0px;left:0px;padding:10px;z-index:999999"><button id="takip_et" class="_jvpff _k2yal _988x3 _i46jh _nv5lf" type="button">Follow All</button> <button id="unfollowjs" class="_jvpff _k2yal _988x3 _i46jh _nv5lf" type="button">Unfollow not Following</button><button id="unfollowalljs" class="_jvpff _k2yal _988x3 _i46jh _nv5lf" type="button">UnFollow All</button>  <br> <a href="https://tinysay.com">Tamer Agaoglu</a></div>');
 
         $("#unfollowjs").click(function () {
@@ -58,6 +80,7 @@ $(function () {
             });
 
         });
+        */
 
     }
 

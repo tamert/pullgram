@@ -5,6 +5,7 @@
    },
    "content_scripts": [ {
       "js": [ "js/jquery.js", "js/content.js" ],
+      "css": [ "css/pull-style.css" ],
       "matches": [ "https://www.instagram.com/*" ]
    } ],
    "description": "Multi follows, unfollows and unfollow users that does not following you",
