@@ -1,3 +1,7 @@
+
+//https://www.instagram.com/smena8m/media/?min_id=1045341392067624850_3108326  adresinden min_id yi döndürerek bir kişinin tüm postlarına ve buna yapılmş comment ve likelara ulaşılabiliniyor
+
+
 $(function () {
 
     var artim = 500;
