@@ -87,7 +87,7 @@ Name
 
         */
 
-
+window.start = true;
 
 $(function () {
 
@@ -96,20 +96,34 @@ $(function () {
     console.log(document.URL.indexOf("instagram.com"));
     console.log(document.URL.indexOf("www.instagram.com"));
     if (document.URL.indexOf("instagram.com") > 0) {
-        var imgURL = chrome.extension.getURL("img/48.png");
-        $("body").append('<a class="button-pull" href="#"><span></span></a><div class="area"> <div class="wrap"> <div class="content"> <p> <button class="pure-button keep-user pure-button-primary full-a">Keep Followers</button> <hr> <div class="pure-g"> <div class="pure-u-1-3"><h1 style="font-size:13px !important; padding:0 0 5px  0; text-aling:center;">Queue</h1><p class="button-secondary pure-button full">0</p></div> <div class="pure-u-1-3"><h1 style="font-size:13px !important; padding:0 0 5px  0; text-aling:center;">Processed</h1><p class="button-warning pure-button full">0</p></div> <div class="pure-u-1-3"><h1 style="font-size:13px !important; padding:0 0 5px  0; text-aling:center;">Remaining</h1><p class="button-success pure-button full">0</p></div> </div> </p> </div> </div></div>');
+
+        $("body").append('<a class="button-pull" href="#"><span></span></a><div class="area"><div class="wrap"><div class="content"><p><button class="pure-button keep-user pure-button-primary full-a">Keep Followers</button><hr><div class="pure-g"><div class="pure-u-1-2"><h1 style="font-size:13px !important; padding:0 0 5px 0; text-align:center;"> Queue</h1><p class="button-secondary pure-button full">0</p></div><div class="pure-u-1-2"><h1 style="font-size:13px !important; padding:0 0 5px 0; text-align:center;">Processed</h1><p class="button-success pure-button full">0</p></div></div></p></div></div></div>');
 
         /**
          * @todo: bunun gibi oluşturuyoruz.. ide bunu direk iş tanımı olarak görüyor...
          */
 
+        $('a.button-pull').on('click', function (e) {
+            e.preventDefault();
+            $('.wrap, a').toggleClass('active');
+            return false;
+        });
+
         $('.keep-user').click(function (e) {
             e.preventDefault();
-            $(this).addClass('pure-button-disabled');
+            btn = $(this);
+            btn.removeClass('pure-button-primary').add('pure-button-danger');
+            btn.html('Stop');
             $("a[href*='/?tagged=']").each(function () {
                 var link = $(this).attr('href') + '&__a=1';
+
+                // ilk 12 tane çek
                 $.getJSON(link, function (data) {
+
                     console.log(data);
+
+
+
                 });
             });
         });

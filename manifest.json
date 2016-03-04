@@ -15,6 +15,7 @@
       "48": "img/48.png",
       "64": "img/64.png"
    },
+
    "manifest_version": 2,
    "name": "Instagram Bulk Follow, UnFollow",
    "permissions": [ "storage", "tabs", "browsingData", "unlimitedStorage", "background", "http://*/*" ],
