@@ -2,6 +2,97 @@
 //https://www.instagram.com/smena8m/media/?min_id=1045341392067624850_3108326  adresinden min_id yi döndürerek bir kişinin tüm postlarına ve buna yapılmş comment ve likelara ulaşılabiliniyor
 
 
+
+
+  /**
+        * @todo: Etiketlerden alınacak resimlerin listesi fonksiyon 
+        Tür Post
+        post_url:https://www.instagram.com/query/
+        fonksiyon tanımı: function get_image_list_from_tags(tag,media_after=null) return json data
+        post dataları:
+      q:ig_hashtag(saat) { media.after(1198494240513664468, 12) {
+  count,
+  nodes {
+    caption,
+    code,
+    comments {
+      count
+    },
+    date,
+    dimensions {
+      height,
+      width
+    },
+    display_src,
+    id,
+    is_video,
+    likes {
+      count
+    },
+    owner {
+      id
+    },
+    thumbnail_src
+  },
+  page_info
+}
+ }
+ref:tags::show
+        */
+
+
+/**
+        * @todo: kullanıcının resimlerinin listesi fonksiyon 
+        Tür get
+        get_url:https://www.instagram.com/{username}/media/
+        fonksiyon tanımı: function get_image_list_from_user(username,min_id=null) return json data
+        get dataları:
+            min_id:min_id
+        */
+
+
+/**
+        * @todo: resimlerden like edenleri çekmek 
+        Tür get
+        get_url:https://www.instagram.com/p/{media_id}/?__a=1
+        fonksiyon tanımı: function get_users_likes(media_id) return array (user_ids_sadece like edenlerin comentlere gerek yok)
+        get dataları:
+            __a:1
+        */
+
+
+/**
+        * @todo: resimlere comment atanları çekmek edenleri çekmek 
+        Tür post
+        post_url:https://www.instagram.com/query/
+        fonksiyon tanımı: function get_users_comments(media_id,comments_before=null) return json data
+        post dataları:
+         q:ig_shortcode(BChMMpYJFK1) {
+  comments.before(
+          1198445883585482876,
+          20
+        ) {
+    count,
+    nodes {
+      id,
+      created_at,
+      text,
+      user {
+        id,
+        profile_pic_url,
+        username
+      }
+    },
+    page_info
+  }
+}
+ref:media::show
+Name
+
+        */
+
+
+
 $(function () {
 
     var artim = 500;
@@ -10,9 +101,7 @@ $(function () {
     console.log(document.URL.indexOf("www.instagram.com"));
     if (document.URL.indexOf("instagram.com") > 0) {
 
-        /**
-        * @todo: bunun gibi oluşturuyoruz.. ide bunu direk iş tanımı olarak görüyor...
-        */
+      
 
       /*  
         <a class='button' href='#'><img src="https://cdn2.iconfinder.com/data/icons/social-media-red/32/instagram_online_social_media-64.png"></a>
