@@ -97,17 +97,50 @@ $(function () {
     console.log(document.URL.indexOf("www.instagram.com"));
     if (document.URL.indexOf("instagram.com") > 0) {
 
-        $("body").append('<a class="button-pull" href="#"><span></span></a><div class="area"><div class="wrap"><div class="content"><p><button class="pure-button keep-user pure-button-primary full-a">Keep Followers</button><hr><div class="pure-g"><div class="pure-u-1-2"><h1 style="font-size:13px !important; padding:0 0 5px 0; text-align:center;"> Queue</h1><p class="button-secondary pure-button full">0</p></div><div class="pure-u-1-2"><h1 style="font-size:13px !important; padding:0 0 5px 0; text-align:center;">Processed</h1><p class="button-success pure-button full">0</p></div></div></p></div></div></div>');
-
+        $("body").append('<a class="button-pull" href="#"><span></span></a><nav class="pushmenu pushmenu-left"> <h3>Menu</h3> <a href="#" class="test">TEST SERVER</a> <a href="#" class="keep-user">GET Followers</a> <div class="content"> <div class="pure-g"> <div class="pure-u-1-2"><h1 style="font-size:13px !important; padding:0 0 5px 0; text-align:center;"> Queue</h1> <p class="button-secondary pure-button full">0</p></div> <div class="pure-u-1-2"><h1 style="font-size:13px !important; padding:0 0 5px 0; text-align:center;"> Processed</h1> <p class="button-success pure-button full">0</p></div> </div> </div></nav>');
+        
         /**
          * @todo: bunun gibi oluşturuyoruz.. ide bunu direk iş tanımı olarak görüyor...
          */
 
-        $('a.button-pull').on('click', function (e) {
+        $menuLeft = $('.pushmenu-left');
+        $nav_list = $('a.button-pull');
+
+        $nav_list.click(function() {
+            $(this).toggleClass('active');
+            $('.pushmenu-push').toggleClass('pushmenu-push-toright');
+            $menuLeft.toggleClass('pushmenu-open');
+        });
+
+
+        $('.test').on('click', function (e) {
+            e.preventDefault();
+
+
+            var jqxhr = $.get( 'https://httpbin.org/?veri=1&veri=2', function() {
+                    console.log( "success" );
+                })
+                .done(function(data) {
+                    console.log(data);
+                })
+                .fail(function() {
+                    console.log( "error" );
+                })
+                .always(function() {
+                    console.log( "finished" );
+                });
+            jqxhr.always(function() {
+                console.log( "second finished" );
+            });
+
+            return false;
+        });
+
+        /*$('a.button-pull').on('click', function (e) {
             e.preventDefault();
             $('.wrap, a').toggleClass('active');
             return false;
-        });
+        });*/
 
         $('.keep-user').click(function (e) {
             e.preventDefault();
