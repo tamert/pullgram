@@ -97,8 +97,8 @@ $(function () {
     console.log(document.URL.indexOf("www.instagram.com"));
     if (document.URL.indexOf("instagram.com") > 0) {
 
-        $("body").append('<a class="button-pull" href="#"><span></span></a><nav class="pushmenu pushmenu-left"> <h3>Menu</h3> <a href="#" class="test">TEST SERVER</a> <a href="#" class="keep-user">GET Followers</a> <div class="content"> <div class="pure-g"> <div class="pure-u-1-2"><h1 style="font-size:13px !important; padding:0 0 5px 0; text-align:center;"> Queue</h1> <p class="button-secondary pure-button full">0</p></div> <div class="pure-u-1-2"><h1 style="font-size:13px !important; padding:0 0 5px 0; text-align:center;"> Processed</h1> <p class="button-success pure-button full">0</p></div> </div> </div></nav>');
-        
+        $("body").append('<a class="button-pull" href="#"><span></span></a><nav class="pushmenu pushmenu-left"> <h3>PULLGRAM</h3> <a href="#" style="color:#FFF; font-weight: normal;" class="test">Test Server</a> <a href="#" style="color:#FFF; font-weight: normal;" class="keep-user">Get Followers</a> <div class="content"> <div class="pure-g"> <div class="pure-u-1-2"> <h1 style="padding-top:10px; font-size:13px !important; color:#FFF; text-align:center;"> Queue</h1> <div style="margin-top:10px; padding:0px 5px; 0px 0px"> <p class="button-secondary pure-button full" style="font-size:35px;">0</p></div></div> <div class="pure-u-1-2"><h1 style="padding-top:10px; font-size:13px !important; color:#FFF; text-align:center;"> Processed</h1> <div style="margin-top:10px; padding:0px 5px; 0px 0px"> <p class="button-success pure-button full" style="font-size:35px;">0</p> </div> </div> </div> </div></nav>');
+
         /**
          * @todo: bunun gibi oluşturuyoruz.. ide bunu direk iş tanımı olarak görüyor...
          */
