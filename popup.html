@@ -1,0 +1,62 @@
+<style>
+    #tree {
+        margin: 2em 0 0 2em;
+        width: 20em;
+        list-style: none;
+    }
+
+    #tree > li {
+        padding-bottom: 3px;
+        margin-bottom: 0.5em;
+        border-bottom: 1px solid #ccc;
+    }
+
+    #tree  li > a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    #tree  li > a:before {
+        content: '+';
+        padding-right: 4px;
+        font-weight: bold;
+    }
+
+    #tree  li >a.active:before {
+        content: '-';
+        padding-right: 4px;
+        font-weight: bold;
+    }
+
+    #tree li ul {
+        margin: 0.5em 0 0.5em 2em;
+        display: block;
+    }
+
+</style>
+
+<ul id="tree">
+    <li>
+        <a href="#">Item</a>
+        <ul>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Item</a>
+        <ul>
+            <li>
+                <a href="#">Item</a>
+                <ul>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                </ul>
+            </li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+    </li>
+</ul>
