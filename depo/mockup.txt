@@ -1,0 +1,103 @@
+[
+  {
+    "top": 91,
+    "left": 19,
+    "z_index": 0,
+    "tool": "button",
+    "text": "Follow",
+    "width": 201
+  },
+  {
+    "top": 135,
+    "left": 18,
+    "z_index": 0,
+    "tool": "button",
+    "text": "UnFollow",
+    "width": 199
+  },
+  {
+    "top": 45,
+    "left": 18,
+    "z_index": 0,
+    "tool": "button",
+    "text": "Collect",
+    "width": 200
+  },
+  {
+    "top": 187,
+    "left": 11,
+    "z_index": 0,
+    "tool": "button",
+    "text": "pool count (1000)",
+    "width": 102
+  },
+  {
+    "top": 188,
+    "left": 122,
+    "z_index": 0,
+    "tool": "button",
+    "text": "Follows (500)",
+    "width": 101
+  },
+  {
+    "top": 261,
+    "left": 15,
+    "z_index": 0,
+    "tool": "paragraph",
+    "text": "Buy licence",
+    "width": 118,
+    "background": "#dedede"
+  },
+  {
+    "top": 201,
+    "left": 355,
+    "z_index": 0,
+    "tool": "rectangle",
+    "width": 282,
+    "height": 182,
+    "color": "#dedede",
+    "border": true
+  },
+  {
+    "top": 212,
+    "left": 429,
+    "z_index": 0,
+    "tool": "heading",
+    "text": "UNFOLLOW",
+    "size": "25",
+    "color": "black"
+  },
+  {
+    "top": 297,
+    "left": 432,
+    "z_index": 0,
+    "tool": "combobox",
+    "text": "1 day",
+    "width": 120
+  },
+  {
+    "top": 348,
+    "left": 525,
+    "z_index": 0,
+    "tool": "button",
+    "text": "Unfollow",
+    "width": 80
+  },
+  {
+    "top": 350,
+    "left": 385,
+    "z_index": 0,
+    "tool": "button",
+    "text": "Cancel",
+    "width": 80
+  },
+  {
+    "top": 255,
+    "left": 311,
+    "z_index": 0,
+    "tool": "paragraph",
+    "text": "Lorem ipsum dolor sit amet",
+    "width": 300,
+    "background": "#dedede"
+  }
+]
